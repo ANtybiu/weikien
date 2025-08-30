@@ -169,8 +169,8 @@ ul{
   gap:2.5rem;
 }
 #clinic-box{
-   margin-top: 5rem;
-  transition: margin-top 0.3s ease-out;
+   margin-top: 10rem;
+  transition: margin-top 0.5s ease-out;
 }
 #clinic-box,#clinic-box1{
   width:90vw;
@@ -297,4 +297,18 @@ ul{
 #call-img2{
   width:2rem;
   margin-right:0rem;
+}
+#clinic-box-more{
+  position: absolute;
+  right: 1.5rem;
+  top:1.5rem;
+  background-color: #D2D0A6;
+  border:none;
+  font-family: font;
+  font-weight:500;
+  font-size:1rem;
+  color:white;
+  padding-left:1rem;
+  padding-right:1rem;
+  border-radius:11rem;
 }
