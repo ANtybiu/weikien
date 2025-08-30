@@ -75,6 +75,21 @@ let landing = false;
 
     observer5.observe(target5);
 /////////////////////////////////////////////////////////////////////////
+
+const targetAll = document.querySelectorAll('.service-gat');
+
+targetAll.forEach(target5 => {
+  const observer5 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.marginTop = "0";
+      }
+    });
+  });
+
+  observer5.observe(target5);
+});
+
     function countUp(target, duration, element) {
       console.log(element)
       const counter = document.querySelector(element);
@@ -83,7 +98,11 @@ let landing = false;
       const timer = setInterval(() => {
         start += increment;
         if (start >= target) {
-          counter.innerHTML = `${target}`; 
+          if(target>=1000){
+            counter.innerHTML = `${target/1000},000`; 
+          }else{
+          counter.innerHTML = `${target}`
+          }; 
           clearInterval(timer);
         } else {
           counter.innerHTML = `${Math.floor(start)}`;
