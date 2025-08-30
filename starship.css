@@ -59,6 +59,7 @@ ul{
   background-color: white;
   align-items: center;
   z-index:1987981709832704917320941803271;
+  transition: background-color 0.3s;
 }
 #header-logo{
   width: 5em;
@@ -165,15 +166,24 @@ ul{
   align-items: center;
   margin-top: 3rem;
   margin-bottom:3rem;
+  gap:2.5rem;
 }
 #clinic-box{
+   margin-top: 5rem;
+  transition: margin-top 0.3s ease-out;
+}
+#clinic-box,#clinic-box1{
   width:90vw;
   height: 27rem;
   background-image: url("asset/teecareBG.png");
   background-size: 35rem;
   background-repeat: no-repeat;
-  background-position-x: -3rem;
   border-radius: 3rem;
+ 
+  
+}
+#clinic-box1{
+  background-image: url("asset/teedentalBG.png");
 }
 #clinic-box-overlay{
   width:100%;
@@ -257,9 +267,8 @@ ul{
   border-radius: 100rem;
   display:flex;
   align-items: center;
-  padding-left: 1rem;
   box-sizing: border-box;
-  gap:0.475rem;
+  justify-content: space-evenly;
 }
 #call-clinic,#call-clinic2{
   display:flex;
