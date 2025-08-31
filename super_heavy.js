@@ -35,32 +35,6 @@ let landing = false;
 
     observer2.observe(target2);
 
-    const target3 = document.querySelector(".pc1");
-
-    const observer3 = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          countUp(1000,1000,".pc1")
-          countUp(402,1000,".gb1")
-        } 
-      });
-    });
-
-    observer3.observe(target3);
-////////////////////////////////////////////////////////////////////
-    const target4 = document.querySelector(".pc1");
-
-    const observer4 = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          countUp(69000,1000,".pc2")
-          countUp(15,1000,".gb2")
-        } 
-      });
-    });
-
-    observer4.observe(target4);
-/////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////
     const target5 = document.querySelector("#clinic-list");
