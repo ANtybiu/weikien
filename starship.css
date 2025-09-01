@@ -379,7 +379,30 @@ ul{
   margin-bottom: 1.5rem
 }
 
-#service-desc{
+#service-desc,#service-progress{
   font-weight:300;
+}
+#service-progress{
+  font-weight:400;
+  font-family: font;
+  font-size: 1.5rem;
+  width: max-content;
+  display:flex;
+  align-items: center;
+}
+#next-service{
+  display:flex;
+  gap: 1.5rem;
+}
+#next-button{
+  font-size: 3rem;
+  font-family: font;
+  font-weight:500;
+  background-color: #F3F1E6;
+  padding-left:1rem;
+  padding-right:1rem;
+  border:none;
+  border-radius:1029rem;
+  box-shadow: 0 0 0.75rem rgba(0,0,0,0.3);;
 }
 
