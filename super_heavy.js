@@ -145,5 +145,59 @@ targetAll.forEach(target5 => {
           <pblack id="service-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</pblack>`;
       }
     }
-  
-    
+
+    let ratingIndex = 1;
+  function nextRatings(){
+      if(ratingIndex!==6){
+      ratingIndex++;
+        updateRating();
+        document.getElementById("rating-progress").innerHTML = `${ratingIndex}/3`
+      }
+    }
+    function prevRatings(){
+      if(ratingIndex!==1){
+      ratingIndex--;
+        updateRating();
+         document.getElementById("rating-progress").innerHTML = `${ratingIndex}/3`
+      }
+    }
+
+    function updateRating(){
+      if(ratingIndex === 1){
+        document.querySelector("#ratings-carousel").innerHTML = `<div id="ratings-box" class="ratings-box" >
+          <span id="ratings-desc">My first time coming to Teecare clinic. I was scared at first but Dr and nurse guide me, helping me with my treatment and both are very kind. They keep me calm and keep checking on me to see if I was ok during the treatment which make me less nervous. Overall, I am really satisfied with the service and the price is really reasonable. Recommended! 5 star 🌟🌟🌟🌟🌟
+          </span>
+          <span id="ratings-author">- Ily Lily<pblack id="service-desc2">Teecare Dental Clinic</pblack></span>
+        </div>`;
+      }else if(ratingIndex === 2){
+        document.querySelector("#ratings-carousel").innerHTML = `<div id="ratings-box" class="ratings-box" >
+          <span id="ratings-desc">Excellent dental treatment by the female dentist. She was able to calm me down before the tooth extraction and gave very clear instructions after my tooth extractions. Her injections are painless as well. She is very experienced. I have been seeing her since 6 years now. Highly recommended!
+          </span>
+          <span id="ratings-author">- Nisa Nisa<pblack id="service-desc2">Tee Dental Surgery</pblack></span>
+        </div>`;
+      }else if(ratingIndex === 3){
+        document.querySelector("#ratings-carousel").innerHTML = `<div id="ratings-box" class="ratings-box" >
+          <span id="ratings-desc">I AM SO SATISFIED! This is the first time i went to Teecare Dental Clinic my friend suggested it to me. The atmosphere was very nice and the clinic was very modern but the best is the dentist was so NICE! service was good and price was reasonable aswell. Absolutely recommend!
+          </span>
+          <span id="ratings-author">- Nigga Higga <pblack id="service-desc2">Teecare Dental Clinic</pblack></span>
+        </div>`;
+      }
+    }
+
+    function countUp(target, duration) {
+      const counter = document.getElementById("alot-ppl");
+      let start = 0;
+      const increment = target / (duration / 16); // ~60fps
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+          counter.textContent = `${target/1000},000`; // finish cleanly
+          clearInterval(timer);
+        } else {
+          counter.textContent = Math.floor(start);
+        }
+      }, 16); // ~60fps
+    }
+
+    // Example: count up to 1000 in 2 seconds
+    countUp(60000, 1000);
