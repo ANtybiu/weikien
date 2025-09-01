@@ -8,12 +8,15 @@ let landing = false;
           header.style.background = "black";
           setTimeout(()=>{
             document.getElementById('header-logo').src = "asset/logoWhite.png"
-            document.getElementById('header')
+            document.getElementById('header-menu').style.display = 'block';
+            document.querySelector('.notify').style.display = 'none'
           },0.15)
         } else if(!landing){
           header.style.background = "white";
           setTimeout(()=>{
-            document.getElementById('header-logo').src = "logo.png"
+            document.getElementById('header-logo').src = "logo.png";
+            document.getElementById('header-menu').style.display = 'none';
+            document.querySelector('.notify').style.display = 'block'
           },0.15)
         }
       });
@@ -85,64 +88,134 @@ targetAll.forEach(target5 => {
     }
 
     let serviceIndex = 1;
-
+    let serviceable = true;
     function nextService(){
-      if(serviceIndex!==6){
+      if(serviceIndex!==6 && serviceable){
       serviceIndex++;
+      serviceable = false
         updateService();
-        document.getElementById("service-progress").innerHTML = `${serviceIndex}/6`
+        document.getElementById("service-progress").innerHTML = `${serviceIndex}/6`;
+        setTimeout(() => {
+          serviceable = true;
+        }, 300);
       }
     }
     function prevService(){
-      if(serviceIndex!==1){
+      if(serviceIndex!==1 && serviceable){
       serviceIndex--;
+      serviceable = false
         updateService();
-         document.getElementById("service-progress").innerHTML = `${serviceIndex}/6`
+         document.getElementById("service-progress").innerHTML = `${serviceIndex}/6`;
+         setTimeout(() => {
+          serviceable = true;
+        }, 300);
       }
     }
     function updateService(){
       if(serviceIndex === 1){
-        document.querySelector(".gat1").innerHTML = `<img src="logo.png" id="service-logo">
+        document.querySelector(".prev-service").style.opacity = "0.5";
+
+        document.querySelector(".next-service").style.opacity = "1";
+        document.querySelector(".gat1").style.opacity = "0";
+        document.querySelector(".gat2").style.opacity = "0";
+        setTimeout(()=>{
+           document.querySelector(".gat1").innerHTML = `<img src="logo.png" id="service-logo">
           <span id="h1b">Consultaion</span>
           <pblack id="service-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</pblack>`;
-        document.querySelector(".gat2").innerHTML = ` <img src="logo.png" id="service-logo">
+           document.querySelector(".gat2").innerHTML = ` <img src="logo.png" id="service-logo">
           <span id="h1b">Scaling & Polishing</span>
           <pblack id="service-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</pblack>`;
+        },150)
+        setTimeout(()=>{
+          document.querySelector(".gat1").style.opacity = "1";
+        document.querySelector(".gat2").style.opacity = "1";
+        },150)
+       
       } else if(serviceIndex === 2){
-        document.querySelector(".gat1").innerHTML = `<img src="logo.png" id="service-logo">
+        document.querySelector(".prev-service").style.opacity = "1";
+        document.querySelector(".next-service").style.opacity = "1";
+        document.querySelector(".gat1").style.opacity = "0";
+        document.querySelector(".gat2").style.opacity = "0";
+        setTimeout(()=>{
+           document.querySelector(".gat1").innerHTML = `<img src="logo.png" id="service-logo">
           <span id="h1b">Dental Filling</span>
           <pblack id="service-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</pblack>`;
-        document.querySelector(".gat2").innerHTML = ` <img src="logo.png" id="service-logo">
+           document.querySelector(".gat2").innerHTML = ` <img src="logo.png" id="service-logo">
           <span id="h1b">Extraction</span>
           <pblack id="service-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</pblack>`;
+        },150)
+        setTimeout(()=>{
+          document.querySelector(".gat1").style.opacity = "1";
+        document.querySelector(".gat2").style.opacity = "1";
+        },150)
       }else if(serviceIndex === 3){
-        document.querySelector(".gat1").innerHTML = `<img src="logo.png" id="service-logo">
+        document.querySelector(".prev-service").style.opacity = "1";
+        document.querySelector(".next-service").style.opacity = "1";
+        document.querySelector(".gat1").style.opacity = "0";
+        document.querySelector(".gat2").style.opacity = "0";
+        setTimeout(()=>{
+           document.querySelector(".gat1").innerHTML = `<img src="logo.png" id="service-logo">
           <span id="h1b">Minor Oral Surgery</span>
           <pblack id="service-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</pblack>`;
-        document.querySelector(".gat2").innerHTML = ` <img src="logo.png" id="service-logo">
+           document.querySelector(".gat2").innerHTML = ` <img src="logo.png" id="service-logo">
           <span id="h1b">Removable Denture</span>
           <pblack id="service-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</pblack>`;
+        },150)
+        setTimeout(()=>{
+          document.querySelector(".gat1").style.opacity = "1";
+        document.querySelector(".gat2").style.opacity = "1";
+        },150)
       }else if(serviceIndex === 4){
-        document.querySelector(".gat1").innerHTML = `<img src="logo.png" id="service-logo">
+        document.querySelector(".prev-service").style.opacity = "1";
+        document.querySelector(".next-service").style.opacity = "1";
+        document.querySelector(".gat1").style.opacity = "0";
+        document.querySelector(".gat2").style.opacity = "0";
+        setTimeout(()=>{
+           document.querySelector(".gat1").innerHTML = `<img src="logo.png" id="service-logo">
           <span id="h1b">Crown & Bridge</span>
           <pblack id="service-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</pblack>`;
-        document.querySelector(".gat2").innerHTML = ` <img src="logo.png" id="service-logo">
+           document.querySelector(".gat2").innerHTML = ` <img src="logo.png" id="service-logo">
           <span id="h1b">Root Canal Treatment</span>
           <pblack id="service-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</pblack>`;
+        },150)
+        setTimeout(()=>{
+          document.querySelector(".gat1").style.opacity = "1";
+        document.querySelector(".gat2").style.opacity = "1";
+        },150)
       }else if(serviceIndex === 5){
-        document.querySelector(".gat1").innerHTML = `<img src="logo.png" id="service-logo">
+        document.querySelector(".prev-service").style.opacity = "1";
+        document.querySelector(".next-service").style.opacity = "1";
+       document.querySelector(".gat1").style.opacity = "0";
+        document.querySelector(".gat2").style.opacity = "0";
+        setTimeout(()=>{
+           document.querySelector(".gat1").innerHTML = `<img src="logo.png" id="service-logo">
           <span id="h1b">Tooth Whitening</span>
           <pblack id="service-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</pblack>`;
-        document.querySelector(".gat2").innerHTML = ` <img src="logo.png" id="service-logo">
+           document.querySelector(".gat2").innerHTML = ` <img src="logo.png" id="service-logo">
           <span id="h1b">Night Guard</span>
           <pblack id="service-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</pblack>`;
+        },150)
+        setTimeout(()=>{
+          document.querySelector(".gat1").style.opacity = "1";
+        document.querySelector(".gat2").style.opacity = "1";
+        },150)
       }else if(serviceIndex === 6){
-        document.querySelector(".gat1").innerHTML = `<img src="logo.png" id="service-logo">
+        document.querySelector(".next-service").style.opacity = "0.5";
+        document.querySelector(".prev-service").style.opacity = "1";
+        document.querySelector(".gat1").style.opacity = "0";
+        document.querySelector(".gat2").style.opacity = "0";
+        setTimeout(()=>{
+           document.querySelector(".gat1").innerHTML = `<img src="logo.png" id="service-logo">
           <span id="h1b">Night Guard</span>
           <pblack id="service-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</pblack>`;
-        document.querySelector(".gat2").innerHTML = ` <img src="logo.png" id="service-logo">
+           document.querySelector(".gat2").innerHTML = ` <img src="logo.png" id="service-logo">
           <span id="h1b">Retainer</span>
           <pblack id="service-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</pblack>`;
+        },150)
+        setTimeout(()=>{
+          document.querySelector(".gat1").style.opacity = "1";
+        document.querySelector(".gat2").style.opacity = "1";
+        },150)
       }
     }
 
@@ -184,6 +257,7 @@ targetAll.forEach(target5 => {
       }
     }
 
+    
     function countUp(target, duration) {
       const counter = document.getElementById("alot-ppl");
       let start = 0;
@@ -200,4 +274,22 @@ targetAll.forEach(target5 => {
     }
 
     // Example: count up to 1000 in 2 seconds
-    countUp(60000, 1000);
+
+    const targeta = document.querySelector("#alot-ppl");
+
+    const observera = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          countUp(60000,1500)
+        } else {
+        }
+      });
+    });
+
+    observera.observe(targeta);
+
+    // OPTIONAL: adjust animation speed based on card count
+    const track = document.getElementById("ratings-carousel");
+    const cards = track.children.length / 2; // unique cards
+    const speed = 15; // seconds per card
+    track.style.animationDuration = `${cards * speed}s`;
