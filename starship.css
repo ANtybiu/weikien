@@ -102,8 +102,8 @@ ul{
   background-color:#D2D0A6 ;
 }
 #landing-page-overlay{
-  width:90vw;
-  height:100vh;
+  width:100vw;
+  height:90vh;
   background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
   position: absolute;
   top:0;
