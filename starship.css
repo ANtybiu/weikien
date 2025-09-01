@@ -14,8 +14,10 @@ p{
 }
 h1{
   font-family:fontSemi;
-  font-size:4em;
-  color:white
+  font-size:3rem;
+  color:white;
+  margin: none;
+  width:70%;
 }
 pblack{
   color: black;
@@ -78,8 +80,23 @@ ul{
   background-color: white;
   font-size:1.5em;
 }
+.notify{
+    padding-left:1.5em;
+  padding-right: 1.5em;
+  padding-top: 0.5em;
+  padding-bottom:0.5em;
+  border:black solid 0.1em;
+  margin-right:2em;
+  border-radius: 1284091740rem;
+  background-color: white;
+  color: black;
+  font-size: 1.25rem !important;
+  font-family: font;
+  font-weight: 400;
+  
+}
 #landing-page{
-  height:90vh;
+  height:90dvh;
   width:100vw;
   position:relative;
   background-color:#D2D0A6 ;
@@ -94,13 +111,29 @@ ul{
 }
 #landing-page-title{
   position:absolute;
-  bottom:20em;
+  bottom:5rem;
   left:0;
   width:100vw;
   display:flex;
   flex-direction: column;
   justify-content: center;
+  align-items: start;
+  padding-left:3rem;
+  box-sizing: border-box;
+}
+#white{
+  width: 3rem;
+  margin-right: 0.5rem;
+  margin-top: 0.3rem;
+}
+#lpt1{
+  font-family: font;
+  font-weight: 500;
+  display:flex;
   align-items: center;
+  color:white;
+  font-size: 2rem;
+  margin-bottom: 0  rem;
 }
 #landing-page-contact{
   background-color: rgba(255,255,255,0.31);
@@ -345,10 +378,20 @@ ul{
   padding:2rem;
   box-sizing: border-box;
   padding-left:2rem;
+  
 }
 .service-gat{
   margin-top:1rem;
   transition: margin-top 0.3s;
+}
+
+.gat1{
+  opacity:1;
+  transition: opacity 0.15s;
+}
+.gat2{
+  opacity:1;
+  transition: opacity 0.15s;
 }
 
 .gayt{
@@ -404,6 +447,10 @@ ul{
   border:none;
   border-radius:1029rem;
   box-shadow: 0 0 0.75rem rgba(0,0,0,0.3);;
+  transition: background-color 0.2s
+}
+#next-button:active{
+  background-color: #cac9c0;
 }
 #ratings{
   margin-top: 5rem;
@@ -414,7 +461,7 @@ ul{
 }
 #alot-ppl{
   font-family:font;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 4rem;
 }
 #h1c{
@@ -432,6 +479,11 @@ ul{
   gap: 1rem;
   width: max-content;
   overflow:hidden;
+  animation: scroll 15s linear infinite;
+  margin-left: 100dvw;
+}
+.ratings-carousel1{
+  animation: scrolly 15s linear infinite !important;
 }
 #ratings-box{
   display: flex;
@@ -441,9 +493,26 @@ ul{
   border-radius: 2rem;
   width:90dvw;
   height: 17.5rem;
-  background: linear-gradient(90deg,rgba(210, 208, 166, 1) 0%, rgba(212, 201, 126, 1) 100%);
+  background: linear-gradient(90deg,rgba(210, 208, 166, 1) 0%, rgb(214, 205, 142) 100%);
   gap: 2.5rem
 }
+@keyframes scrolly {
+      0% {
+        transform: translateX(-52.5%);
+      }
+      100% {
+        transform: translateX(0); 
+      }
+    }
+
+ @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-52.5%);
+      }
+    }
 #ratings-desc{
   font-family:font;
   font-weight: 500;
