@@ -8,15 +8,11 @@ let landing = false;
           header.style.background = "black";
           setTimeout(()=>{
             document.getElementById('header-logo').src = "asset/logoWhite.png"
-            document.getElementById('header-menu').style.display = 'block';
-            document.querySelector('.notify').style.display = 'none'
           },0.15)
         } else if(!landing){
           header.style.background = "white";
           setTimeout(()=>{
             document.getElementById('header-logo').src = "logo.png";
-            document.getElementById('header-menu').style.display = 'none';
-            document.querySelector('.notify').style.display = 'block'
           },0.15)
         }
       });
