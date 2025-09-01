@@ -96,13 +96,13 @@ ul{
   
 }
 #landing-page{
-  height:100vh;
+  height:90vh;
   width:100vw;
   position:relative;
   background-color:#D2D0A6 ;
 }
 #landing-page-overlay{
-  width:100vw;
+  width:90vw;
   height:100vh;
   background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
   position: absolute;
@@ -539,6 +539,7 @@ ul{
   font-size: 1rem;
   padding-left: 0.5rem;
 }
+
 
 
 
