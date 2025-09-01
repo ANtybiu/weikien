@@ -382,7 +382,7 @@ ul{
 #service-desc,#service-progress{
   font-weight:300;
 }
-#service-progress{
+#service-progress,#rating-progress{
   font-weight:400;
   font-family: font;
   font-size: 1.5rem;
@@ -405,4 +405,68 @@ ul{
   border-radius:1029rem;
   box-shadow: 0 0 0.75rem rgba(0,0,0,0.3);;
 }
-
+#ratings{
+  margin-top: 5rem;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+#alot-ppl{
+  font-family:font;
+  font-weight: bold;
+  font-size: 4rem;
+}
+#h1c{
+  font-family:fontSemi;
+  font-size:1.5rem;
+  color:black
+}
+#ratings-carousel{
+  margin-top: 2.5rem;
+  height: 20rem;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: max-content;
+  overflow:hidden;
+}
+#ratings-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  width:90dvw;
+  height: 17.5rem;
+  background: linear-gradient(90deg,rgba(210, 208, 166, 1) 0%, rgba(212, 201, 126, 1) 100%);
+  gap: 2.5rem
+}
+#ratings-desc{
+  font-family:font;
+  font-weight: 500;
+  font-size: 1.1rem;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right:1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+#ratings-author{
+  width:100%;
+  text-align: start;
+  font-family: font;
+  font-size: 1.5rem;
+  font-weight:500;
+  display:flex;
+  align-items: center;
+  padding-left: 2.5rem;
+  box-sizing: border-box;
+}
+#service-desc2{
+  font-weight:300;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
