@@ -328,32 +328,35 @@ ul{
 #services-list{
   margin-top: 2.5rem;
   width:100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 2rem;
-  column-gap: 4rem;
-  text-align: center;
-  padding-left:3rem;
-  padding-right:3rem;
-  box-sizing: border-box;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 #service-item{
-  font-family:font;
-  font-weight: 500;
-  font-size:1.5rem;
-  height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #D2D0A6;
-  border-radius: 1rem;
-  color:white
+  width:90%;
+  background: linear-gradient(270deg,rgba(242, 242, 242, 1) 0%, rgba(231, 230, 219, 1) 100%);
+  display:flex;
+  flex-direction: column;
+  height: 20rem;
+  border-radius: 2rem;
+  padding:2rem;
+  box-sizing: border-box;
+  padding-left:2rem;
 }
 .service-gat{
   margin-top:1rem;
   transition: margin-top 0.3s;
 }
+
+.gayt{
+  align-items: end;
+  text-align: end;
+  background: linear-gradient(90deg,rgba(242, 242, 242, 1) 0%, rgba(231, 230, 219, 1) 100%) !important;
+}
+
 #hpNum{
   color:white;
   bottom: 0.5rem;
@@ -363,5 +366,20 @@ ul{
   font-size: 1rem;
   width:100%;
   text-align: center;
+}
+
+#service-logo{
+  width:12.5%;
+  background-color: #F3F1E6;
+  padding-top:0.5rem;
+  padding-left:1rem;
+  padding-right:1rem;
+  border-radius:1rem;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+  margin-bottom: 1.5rem
+}
+
+#service-desc{
+  font-weight:300;
 }
 
