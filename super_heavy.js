@@ -284,8 +284,4 @@ targetAll.forEach(target5 => {
 
     observera.observe(targeta);
 
-    // OPTIONAL: adjust animation speed based on card count
-    const track = document.getElementById("ratings-carousel");
-    const cards = track.children.length / 2; // unique cards
-    const speed = 15; // seconds per card
-    track.style.animationDuration = `${cards * speed}s`;
+
